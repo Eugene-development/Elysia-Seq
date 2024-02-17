@@ -10,6 +10,5 @@ const app = new Elysia()
             typeDefs,
             resolvers
         })
-        
     )
     .listen(8080)
