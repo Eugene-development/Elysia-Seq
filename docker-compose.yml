@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  next:
+    image: larux/buntest:190224
+    container_name: "${COMPOSE_PROJECT_NAME}_PROJECT"
+    restart: always
+    command: ["bun", "start"]
+
+  nginx:
+    image: nginx:1.13
+    container_name: "${COMPOSE_PROJECT_NAME}_NGINX"
+    ports:
+      - "1002:80"
+    volumes:
+      - ./:/var/www
+      - ./docker/nginx/conf.d/:/etc/nginx/conf.d/
+    depends_on:
+      - next
