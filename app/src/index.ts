@@ -4,7 +4,6 @@ import { apollo } from '@elysiajs/apollo'
 import { typeDefs } from "./combine/defs";
 import { resolvers } from "./combine/resolvers";
 
-
 const app = new Elysia()
     .use(apollo({
             typeDefs,
