@@ -1,11 +1,11 @@
 import { gql } from '@elysiajs/apollo'
 
-export const categoryTypeDefs = gql`
-    type Category {
+export const rubricTypeDefs = gql`
+    type Rubric {
         value: String
     }
 
     type Query {
-        categories: [Category]
+        rubrics: [Rubric]
     }
 `;

@@ -1,8 +1,8 @@
 import { Elysia } from "elysia";
-import { apollo, gql } from '@elysiajs/apollo'
+import { apollo } from '@elysiajs/apollo'
 
-import { typeDefs } from "./entities/category/schema";
-import { resolvers } from "./entities/category/resolver";
+import { typeDefs } from "./combine/defs";
+import { resolvers } from "./combine/resolvers";
 
 
 const app = new Elysia()

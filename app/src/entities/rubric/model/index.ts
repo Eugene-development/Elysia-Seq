@@ -1,10 +1,10 @@
-import sequelize from '../../db';
+import sequelize from '../../../db';
 
 const { Sequelize } = require("sequelize");
 
 
-export const Test = sequelize.define('test', {
-  valuee2: {
+export const Rubric = sequelize.define('rubric', {
+  value: {
     type: Sequelize.STRING,
     allowNull: false
   },
