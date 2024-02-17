@@ -1,25 +1,14 @@
 import { Elysia } from "elysia";
 import { apollo, gql } from '@elysiajs/apollo'
 
-import { Category } from "./models";
+import { typeDefs } from "./entities/category/schema";
+import { resolvers } from "./entities/category/resolver";
 
 
 const app = new Elysia()
     .use(apollo({
-            typeDefs: gql`
-                type Category {
-                    value: String
-                }
-
-                type Query {
-                    categories: [Category]
-                }
-            `,
-            resolvers: {
-                Query: {
-                    categories: async () => await Category.findAll()
-                }
-            }
+            typeDefs,
+            resolvers
         })
         
     )
