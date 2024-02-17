@@ -1,14 +1,11 @@
 import { Elysia } from "elysia";
 import { apollo, gql } from '@elysiajs/apollo'
 
-import sequelize from './db';
-
 import { Category } from "./models";
 
 
 const app = new Elysia()
-    .use(
-        apollo({
+    .use(apollo({
             typeDefs: gql`
                 type Category {
                     value: String
@@ -24,9 +21,6 @@ const app = new Elysia()
                 }
             }
         })
+        
     )
     .listen(8080)
-
-    console.log(
-   `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
- );
