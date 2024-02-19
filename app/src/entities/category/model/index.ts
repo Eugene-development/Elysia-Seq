@@ -1,15 +1,18 @@
 import sequelize from '../../../db';
-
-const { Sequelize } = require("sequelize");
+import { DataTypes } from 'sequelize';
+import { Rubric } from '../../rubric/model';
 
 
 export const Category = sequelize.define('category', {
+  id: {
+    type: DataTypes.UUID,
+    defaultValue: DataTypes.UUIDV4,
+    primaryKey: true
+  },
   value: {
-    type: Sequelize.STRING,
+    type: DataTypes.STRING,
     allowNull: false
   },
-  value2: {
-    type: Sequelize.STRING,
-    allowNull: false
-  },
+  // rubricId: { type: DataTypes.UUID}
 });
+
