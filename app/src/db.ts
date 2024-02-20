@@ -1,6 +1,6 @@
 import { Sequelize } from 'sequelize';
 import * as fs from 'fs';
-import associateModels from "./combine/associateModels";
+import associateModels from "./associateModels";
 
 const sequelize = new Sequelize("novostroy", "user777", "dbuser777!", {
   host: "c-c9q0ajkg37dkflk2ghiu.rw.mdb.yandexcloud.net",

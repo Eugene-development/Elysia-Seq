@@ -12,11 +12,12 @@ export const Category = sequelize.define('category', {
     type: DataTypes.STRING,
     allowNull: false
   },
-  // rubricId: {
-  //   type: DataTypes.INTEGER,
-  //   references: {
-  //     model: Rubric,
-  //     key: 'id',
-  //   }
-  // },
+  rubricId: {
+    type: DataTypes.INTEGER,
+    references: {
+      model: Rubric,
+      key: 'id',
+    }
+  },
 });
+
