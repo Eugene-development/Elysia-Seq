@@ -3,7 +3,7 @@ import { gql } from '@elysiajs/apollo'
 export const rubricTypeDefs = gql`
     type Rubric {
         value: String
-        # categories: [Category]
+        categories: [Category]
     }
 
     type Query {

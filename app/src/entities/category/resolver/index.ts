@@ -1,4 +1,3 @@
-// src/resolvers/index.ts
 import { Category } from "../model";
 
 export const categoryResolver = {

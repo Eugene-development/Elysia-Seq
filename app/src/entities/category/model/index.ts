@@ -2,17 +2,21 @@ import sequelize from '../../../db';
 import { DataTypes } from 'sequelize';
 import { Rubric } from '../../rubric/model';
 
-
 export const Category = sequelize.define('category', {
   id: {
-    type: DataTypes.UUID,
-    defaultValue: DataTypes.UUIDV4,
+    type: DataTypes.INTEGER,
+    autoIncrement: true,
     primaryKey: true
   },
   value: {
     type: DataTypes.STRING,
     allowNull: false
   },
-  // rubricId: { type: DataTypes.UUID}
+  // rubricId: {
+  //   type: DataTypes.INTEGER,
+  //   references: {
+  //     model: Rubric,
+  //     key: 'id',
+  //   }
+  // },
 });
-
