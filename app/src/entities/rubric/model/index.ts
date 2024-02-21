@@ -17,24 +17,24 @@ export const Rubric = sequelize.define('rubric', {
   },
 });
 
-export const Category = sequelize.define('category', {
-  id: {
-    type: DataTypes.INTEGER,
-    autoIncrement: true,
-    primaryKey: true
-  },
-  value: {
-    type: DataTypes.STRING,
-    allowNull: false
-  },
-  rubricId: {
-    type: DataTypes.INTEGER,
-    references: {
-      model: Rubric,
-      key: 'id',
-    }
-  },
-});
+// export const Category = sequelize.define('category', {
+//   id: {
+//     type: DataTypes.INTEGER,
+//     autoIncrement: true,
+//     primaryKey: true
+//   },
+//   value: {
+//     type: DataTypes.STRING,
+//     allowNull: false
+//   },
+//   rubricId: {
+//     type: DataTypes.INTEGER,
+//     references: {
+//       model: Rubric,
+//       key: 'id',
+//     }
+//   },
+// });
 
-Rubric.hasMany(Category)
-Category.belongsTo(Rubric);
+// Rubric.hasMany(Category)
+// Category.belongsTo(Rubric);
