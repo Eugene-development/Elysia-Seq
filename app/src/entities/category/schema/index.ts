@@ -3,10 +3,11 @@ import { gql } from '@elysiajs/apollo'
 export const categoryTypeDefs = gql`
     type Category {
         value: String
-        rubricId: ID
+        rubrics: Rubric!
     }
 
     type Query {
         categories: [Category]
+        categoriesWithRubrics: [Category!]!
     }
 `;
