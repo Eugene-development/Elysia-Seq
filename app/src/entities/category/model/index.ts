@@ -21,3 +21,4 @@ export const Category = sequelize.define('category', {
   },
 });
 
+// const myFoo = await Category.create({ value: "My Foo" });

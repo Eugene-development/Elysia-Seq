@@ -15,3 +15,5 @@ const app = new Elysia()
     .listen(8080)
 
     associateModels();
+
+    

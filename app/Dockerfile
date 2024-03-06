@@ -13,8 +13,3 @@ ENV NODE_ENV production
 CMD ["bun", "build", "./src/index.ts", "--outfile=bundle.js"]
 
 EXPOSE 3000
-
-
-
-
-

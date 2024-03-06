@@ -13,7 +13,7 @@ services:
     ports:
       - "1002:80"
     volumes:
-      - ./:/var/www
+      # - ./:/var/www
       - ./docker/nginx/conf.d/:/etc/nginx/conf.d/
     depends_on:
       - next

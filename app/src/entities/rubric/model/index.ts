@@ -11,10 +11,10 @@ export const Rubric = sequelize.define('rubric', {
     autoIncrement: true,
     primaryKey: true
   },
-  value: {
-    type: DataTypes.STRING,
-    allowNull: false
-  },
+  // value: {
+  //   type: DataTypes.STRING,
+  //   allowNull: false
+  // },
 });
 
 // export const Category = sequelize.define('category', {
@@ -38,3 +38,6 @@ export const Rubric = sequelize.define('rubric', {
 
 // Rubric.hasMany(Category)
 // Category.belongsTo(Rubric);
+
+
+

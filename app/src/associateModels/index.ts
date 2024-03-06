@@ -16,6 +16,5 @@ import { Category } from '../entities/category/model';
 export default function associateModels() {
   Rubric.hasMany(Category)
   Category.belongsTo(Rubric, { foreignKey: 'rubricId' });
-
 }
 
