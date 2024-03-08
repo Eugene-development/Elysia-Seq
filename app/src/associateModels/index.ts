@@ -1,6 +1,7 @@
 // associateModels.ts
 import { Rubric } from '../entities/rubric/model';
 import { Category } from '../entities/category/model';
+import { Image} from '../entities/image/model'
 
 // export default function associateModels() {
   // Rubric.hasMany(Category, {
@@ -15,6 +16,13 @@ import { Category } from '../entities/category/model';
 // }
 export default function associateModels() {
   Rubric.hasMany(Category)
-  Category.belongsTo(Rubric, { foreignKey: 'rubricId' });
+  Category.belongsTo(Rubric, { foreignKey: 'rubricId' })
+  // Image.hasMany(Comment, {
+  // foreignKey: "commentableId",
+  // constraints: false,
+  // scope: {
+  //   commentableType: "image",
+  // },
+// });
 }
 

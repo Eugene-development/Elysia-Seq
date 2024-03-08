@@ -1,9 +1,10 @@
 import { gql } from "@elysiajs/apollo";
+// import { Comment } from "../../../db";
 
 export const imageTypeDefs = gql`
   type Image {
     value: String
-    # comments: [Comment]
+    # comment: [Comment]
   }
 
   type Query {
