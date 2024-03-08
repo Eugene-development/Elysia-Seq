@@ -1,14 +1,13 @@
 import { gql } from "@elysiajs/apollo";
-// import { Comment } from "../../../db";
 
-export const imageTypeDefs = gql`
-  type Image {
+export const videoTypeDefs = gql`
+  type Video {
     value: String
     # comment: [Comment]
   }
 
   type Query {
-    images: [Image]
+    videos: [Video]
     # categoriesWithRubrics: [Category!]!
   }
 `;

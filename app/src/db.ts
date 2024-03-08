@@ -20,7 +20,10 @@ const sequelize = new Sequelize("novostroy", "user777", "dbuser777!", {
   logging: console.log,
 });
 
+export default sequelize;
 
+
+// ----------------------------------------------------------------
 
 // Вспомогательная функция для преобразования первого символа строки в верхний регистр
 const uppercaseFirst = str => `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
@@ -69,9 +72,9 @@ sequelize.define('Comment', {
   }
 });
 
-const Image = sequelize.models.Image;
-const Video = sequelize.models.Video;
-const Comment = sequelize.models.Comment;
+export const Image = sequelize.models.Image;
+export const Video = sequelize.models.Video;
+export const Comment = sequelize.models.Comment;
 
 // Установка полиморфных связей для модели Image
 Image.hasMany(Comment, {
@@ -92,6 +95,9 @@ Video.hasMany(Comment, {
   }
 });
 Comment.belongsTo(Video, { foreignKey: 'commentableId', constraints: false });
+
+
+// --------------------------------
 
 
 // import sequelize from '../../../db';
@@ -184,16 +190,17 @@ Comment.belongsTo(Video, { foreignKey: 'commentableId', constraints: false });
 //   }
 // });
 
-class User extends Model {}
+// class User extends Model {}
 
-User.init({
-  title: DataTypes.STRING,
-  url: DataTypes.STRING
-}, { sequelize, modelName: 'user' });
+// User.init({
+//   title: DataTypes.STRING,
+//   url: DataTypes.STRING
+// }, { sequelize, modelName: 'user' });
 
 
 // Sync models with database
-sequelize.sync({ alter: true });
+sequelize.sync();
+// sequelize.sync({ alter: true });
 
 // sequelize.sync({ alter: true }).then(() => {
 //   associateModels(); // Установить ассоциации после синхронизации моделей
@@ -211,4 +218,3 @@ async function testConnection() {
 
 testConnection();
 
-export default sequelize;

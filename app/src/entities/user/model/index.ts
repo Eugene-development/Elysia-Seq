@@ -1,9 +1,14 @@
-import { DataTypes, Model } from 'sequelize';
 import sequelize from '../../../db';
+import { DataTypes } from 'sequelize';
 
-class User extends Model {}
-
-User.init({
-  title: DataTypes.STRING,
-  url: DataTypes.STRING
-}, { sequelize, modelName: 'user' });
+export const User = sequelize.define('user', {
+  id: {
+    type: DataTypes.INTEGER,
+    autoIncrement: true,
+    primaryKey: true
+  },
+  value: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+});

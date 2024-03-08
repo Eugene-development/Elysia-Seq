@@ -1,7 +1,7 @@
 // associateModels.ts
 import { Rubric } from '../entities/rubric/model';
 import { Category } from '../entities/category/model';
-import { Image} from '../entities/image/model'
+// import { Image} from '../entities/image/model'
 
 // export default function associateModels() {
   // Rubric.hasMany(Category, {
