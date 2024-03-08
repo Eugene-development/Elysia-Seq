@@ -1,6 +1,8 @@
 import { Sequelize } from "sequelize";
 import * as fs from "fs";
-import associateModels from "./associateModels";
+// import associateModels from "./associateModels";
+import { DataTypes, Model } from "sequelize";
+
 
 const sequelize = new Sequelize("novostroy", "user777", "dbuser777!", {
   host: "c-c9q0ajkg37dkflk2ghiu.rw.mdb.yandexcloud.net",
@@ -19,7 +21,6 @@ const sequelize = new Sequelize("novostroy", "user777", "dbuser777!", {
 });
 
 // import sequelize from '../../../db';
-import { DataTypes, Model } from "sequelize";
 
 // sequelize.define('xxx', {
 //   id: {

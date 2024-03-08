@@ -4,6 +4,7 @@ export const categoryTypeDefs = gql`
     type Category {
         value: String
         rubrics: Rubric!
+        # comments: [Comment]
     }
 
     type Query {
